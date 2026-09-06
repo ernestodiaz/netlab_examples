@@ -1,0 +1,37 @@
+provider: clab
+#defaults.device: ioll2
+defaults.devices.iol.clab.image: vrnetlab/cisco_iol:17.12.01 
+defaults.devices.ioll2.clab.image: vrnetlab/cisco_iol:L2-17.12.01
+
+nodes: 
+  s1:
+  s2:
+  h1:
+  h2:
+  r1:
+    id: 42
+  r2:
+
+groups:
+  switches:
+    members: [s1,s2]
+    device: ioll2
+    module: [vlan]
+  routers:
+    members: [r1,r2]
+    device: iol
+    module: [ospf]
+  hosts:
+    members: [h1,h2]
+    device: linux
+
+vlans:
+  red: 
+
+links:
+  - s1-r1
+  - r1-r2
+  - r2-s2
+  - h1-s1
+  - h2-s2
+

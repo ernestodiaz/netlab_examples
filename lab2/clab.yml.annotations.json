@@ -1,0 +1,91 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [
+    {
+      "id": "traffic-rate-1",
+      "position": {
+        "x": 533.2466931224019,
+        "y": 31.23058876654602
+      },
+      "nodeId": "r1",
+      "interfaceName": "Ethernet0/2",
+      "mode": "chart",
+      "textMetric": "combined",
+      "backgroundOpacity": 20,
+      "borderWidth": 1,
+      "borderRadius": 8,
+      "width": 280,
+      "height": 170
+    },
+    {
+      "id": "traffic-rate-2",
+      "position": {
+        "x": 74.42569382569354,
+        "y": 27.476897952332422
+      },
+      "nodeId": "r1",
+      "interfaceName": "Ethernet0/1",
+      "mode": "chart",
+      "textMetric": "combined",
+      "backgroundOpacity": 20,
+      "borderWidth": 1,
+      "borderRadius": 8,
+      "width": 280,
+      "height": 170
+    }
+  ],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "s1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 260,
+        "y": 240
+      }
+    },
+    {
+      "id": "s2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 580,
+        "y": 380
+      }
+    },
+    {
+      "id": "r1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 420,
+        "y": 180
+      }
+    },
+    {
+      "id": "r2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 580,
+        "y": 240
+      }
+    },
+    {
+      "id": "h1",
+      "position": {
+        "x": 260,
+        "y": 380
+      }
+    },
+    {
+      "id": "h2",
+      "position": {
+        "x": 580,
+        "y": 520
+      }
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

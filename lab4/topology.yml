@@ -1,0 +1,7 @@
+provider: clab
+defaults.device: crpd
+defaults.devices.crpd.clab.image: crpd:23.2R1.13
+
+nodes: [r1]
+
+

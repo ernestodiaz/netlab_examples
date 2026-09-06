@@ -1,0 +1,110 @@
+{
+  "loopback": {
+    "ipv4": "192.168.1.1",
+    "type": "loopback",
+    "neighbors": [],
+    "virtual_interface": true,
+    "ifindex": 0,
+    "ifname": "Loopback0"
+  },
+  "interfaces": [
+    {
+      "ipv4": "10.12.1.1/30",
+      "linkindex": 1,
+      "type": "p2p",
+      "name": "r1 -> r2",
+      "ifindex": 1,
+      "ifname": "Ethernet0/1",
+      "clab": {
+        "name": "Ethernet0/1"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.12.1.2/30",
+          "ifname": "Ethernet0/1",
+          "node": "r2"
+        }
+      ]
+    },
+    {
+      "ipv4": "10.13.1.1/30",
+      "linkindex": 2,
+      "type": "p2p",
+      "name": "r1 -> r3",
+      "ifindex": 2,
+      "ifname": "Ethernet0/2",
+      "clab": {
+        "name": "Ethernet0/2"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.13.1.2/30",
+          "ifname": "Ethernet0/1",
+          "node": "r3"
+        }
+      ]
+    },
+    {
+      "ipv4": "10.14.1.1/30",
+      "linkindex": 3,
+      "type": "p2p",
+      "name": "r1 -> r4",
+      "ifindex": 3,
+      "ifname": "Ethernet0/3",
+      "clab": {
+        "name": "Ethernet0/3"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.14.1.2/30",
+          "ifname": "Ethernet0/1",
+          "node": "r4"
+        }
+      ]
+    },
+    {
+      "ipv4": "10.15.1.1/30",
+      "linkindex": 4,
+      "type": "p2p",
+      "name": "r1 -> r5",
+      "ifindex": 4,
+      "ifname": "Ethernet1/0",
+      "clab": {
+        "name": "Ethernet1/0"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.15.1.2/30",
+          "ifname": "Ethernet0/1",
+          "node": "r5"
+        }
+      ]
+    }
+  ],
+  "clab": {
+    "kind": "cisco_iol",
+    "config_templates": [
+      {
+        "source": "ifstate",
+        "target": "/iol/ifstate.cfg"
+      }
+    ],
+    "binds": [
+      {
+        "target": "/iol/ifstate.cfg",
+        "source": "node_files/r1/ifstate"
+      }
+    ]
+  },
+  "box": "vrnetlab/cisco_iol:17.12.01",
+  "role": "router",
+  "af": {
+    "ipv4": true
+  },
+  "mgmt": {
+    "ifname": "Ethernet0/0",
+    "mac": "ca:fe:00:01:00:00",
+    "ipv4": "192.168.121.101"
+  },
+  "hostname": "clab-lab5-r1"
+}

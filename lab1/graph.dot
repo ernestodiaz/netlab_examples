@@ -1,0 +1,30 @@
+graph {
+  bgcolor="transparent"
+  nodesep="0.5"
+  ranksep="1"
+  node [bgcolor="#ff9f01" fillcolor="#ff9f01" margin="0.3,0.1" shape="box" style="rounded,filled" fontname="Verdana" fontsize="11"]
+  edge [fontname="Verdana" labelfontsize="8" labeldistance="1.5"]
+  subgraph "cluster_AS_65000" {
+    bgcolor="#e8e8e8"
+    color="#c0c0c0"
+    fontname="Verdana"
+    fontsize="12"
+    margin="16"
+    label="AS 65000"
+    "r1" [
+      label="r1 [iol]\n10.0.0.1/32"
+    ]
+    "r2" [
+      label="r2 [iol]\n10.0.0.2/32"
+    ]
+    "r3" [
+      label="r3 [iol]\n10.0.0.3/32"
+    ]
+    "r4" [
+      label="r4 [iol]\n10.0.0.4/32"
+    ]
+  }
+ "r1" -- "r2"
+ "r1" -- "r3"
+ "r3" -- "r4"
+}

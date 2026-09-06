@@ -1,0 +1,33 @@
+provider: clab
+
+#defaults.device: iol
+#defaults.devices.iol.clab.image: vrnetlab/cisco_iol:17.12.01
+
+defaults.device: iosxr
+defaults.devices.iosxr.clab.image: ios-xrd-control-plane:26-1-1 
+
+nodes: [r1,r2,r3,r4,r5,r6,r7,r8]
+
+module: [ospf,bgp]
+
+bgp:
+  as: 6500
+  rr_list: [r1,r2,r3,r4,r5,r6,r7,r8]
+
+links:
+  - r1-r2
+  - r1-r3
+  - r2-r3
+  - r2-r4
+  - r2-r6
+  - r3-r5
+  - r3-r7
+  - r4-r6
+  - r5-r7
+  - r6-r8
+  - r6-r7
+  - r7-r8
+  
+
+
+

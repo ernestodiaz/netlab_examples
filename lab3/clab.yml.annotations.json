@@ -1,0 +1,93 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [
+    {
+      "id": "traffic-rate-1",
+      "position": {
+        "x": 380,
+        "y": -200
+      },
+      "nodeId": "r1",
+      "interfaceName": "Gi0-0-0-0",
+      "mode": "chart",
+      "textMetric": "combined",
+      "backgroundOpacity": 20,
+      "borderWidth": 1,
+      "borderRadius": 8,
+      "width": 280,
+      "height": 170
+    }
+  ],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "r1",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": 120,
+        "y": -240
+      }
+    },
+    {
+      "id": "r2",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": -40,
+        "y": -100
+      }
+    },
+    {
+      "id": "r3",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": 280,
+        "y": -100
+      }
+    },
+    {
+      "id": "r4",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": -200,
+        "y": 20
+      }
+    },
+    {
+      "id": "r5",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": 420,
+        "y": 20
+      }
+    },
+    {
+      "id": "r6",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": -40,
+        "y": 160
+      }
+    },
+    {
+      "id": "r7",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": 280,
+        "y": 160
+      }
+    },
+    {
+      "id": "r8",
+      "interfacePattern": "Gi0-0-0-{n}",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

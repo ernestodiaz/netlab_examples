@@ -1,0 +1,37 @@
+hostname r5
+!
+no ip domain lookup
+logging buffered 256000
+
+!
+lldp run
+!
+ip host r1 192.168.1.1 10.12.1.1 10.13.1.1 10.14.1.1 10.15.1.1
+ip host r2 192.168.2.2 10.12.1.2
+ip host r3 192.168.3.3 10.13.1.2
+ip host r4 192.168.4.4 10.14.1.2
+!
+ip routing
+!
+no ipv6 unicast-routing
+!
+!
+interface Loopback0
+ ip address 192.168.5.5 255.255.255.255
+!
+interface Ethernet0/0
+ no lldp transmit
+ no lldp receive
+!
+interface Ethernet0/1
+ description r5 -> r1
+ ip address 10.15.1.2 255.255.255.252
+ no shutdown
+!
+!
+line vty 0 4
+ exec-timeout 0 0 
+!
+no banner exec
+no banner login
+no banner incoming

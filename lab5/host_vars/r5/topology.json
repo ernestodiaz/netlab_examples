@@ -1,0 +1,56 @@
+{
+  "loopback": {
+    "ipv4": "192.168.5.5",
+    "type": "loopback",
+    "neighbors": [],
+    "virtual_interface": true,
+    "ifindex": 0,
+    "ifname": "Loopback0"
+  },
+  "interfaces": [
+    {
+      "ipv4": "10.15.1.2/30",
+      "linkindex": 4,
+      "type": "p2p",
+      "name": "r5 -> r1",
+      "ifindex": 1,
+      "ifname": "Ethernet0/1",
+      "clab": {
+        "name": "Ethernet0/1"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.15.1.1/30",
+          "ifname": "Ethernet1/0",
+          "node": "r1"
+        }
+      ]
+    }
+  ],
+  "clab": {
+    "kind": "cisco_iol",
+    "config_templates": [
+      {
+        "source": "ifstate",
+        "target": "/iol/ifstate.cfg"
+      }
+    ],
+    "binds": [
+      {
+        "target": "/iol/ifstate.cfg",
+        "source": "node_files/r5/ifstate"
+      }
+    ]
+  },
+  "box": "vrnetlab/cisco_iol:17.12.01",
+  "role": "router",
+  "af": {
+    "ipv4": true
+  },
+  "mgmt": {
+    "ifname": "Ethernet0/0",
+    "mac": "ca:fe:00:05:00:00",
+    "ipv4": "192.168.121.105"
+  },
+  "hostname": "clab-lab5-r5"
+}

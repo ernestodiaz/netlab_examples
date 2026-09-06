@@ -1,0 +1,24 @@
+provider: clab
+defaults.device: iol
+defaults.devices.iol.clab.image: vrnetlab/cisco_iol:17.12.01
+
+#defaults.device: eos
+#defaults.devices.eos.clab.image: ceos:4.35.5
+
+nodes: [r1,r2,r3,r4] 
+
+module: [ospf,bgp]
+
+bgp:
+  as: 65000
+  rr_list: [r1,r2,r3,r4]
+links:
+  - r1-r2
+  - r1-r3
+  - prefix: 172.10.100.0/29
+    r3:
+        ipv4: 172.16.100.1
+    r4:
+        ipv4: 172.16.100.2
+
+

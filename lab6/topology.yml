@@ -1,0 +1,44 @@
+provider: clab
+defaults.device: iol
+defaults.devices.iol.clab.image: vrnetlab/cisco_iol:17.12.01
+
+nodes:
+  r1:
+    loopback:
+      ipv4: 192.168.1.1
+  r2:
+    loopback:
+      ipv4: 192.168.2.2
+  r3:
+    loopback:
+      ipv4: 192.168.3.3
+  r4:
+    loopback:
+      ipv4: 192.168.4.4
+  r5:
+    loopback:
+      ipv4: 192.168.5.5
+  r6:
+    loopback:
+      ipv4: 192.168.6.6
+
+
+links:
+  - r1:
+    r2:
+    prefix: 10.12.1.0/30
+  - r1:
+    r3:
+    prefix: 10.13.1.0/30
+  - r1:
+    r4:
+    prefix: 10.14.1.0/30
+  - r1:
+    r5:
+    prefix: 10.15.1.0/30
+  - r2:
+    r6:
+    prefix: 10.26.1.0/30
+
+
+

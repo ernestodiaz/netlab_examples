@@ -1,0 +1,99 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1786403360430",
+      "text": "10.0.0./30",
+      "position": {
+        "x": 456.62750580184746,
+        "y": 298.0435324048067
+      },
+      "fontSize": 14,
+      "fontColor": "#bbbebf",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [
+    {
+      "id": "freeShape_1786403612757",
+      "shapeType": "rectangle",
+      "position": {
+        "x": 249.14782489802198,
+        "y": 332.45564055780216
+      },
+      "width": 102,
+      "height": 210,
+      "fillColor": "rgba(127, 127, 127, 0.16)",
+      "fillOpacity": 0.2,
+      "borderColor": "#bbbebf",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "rotation": 0,
+      "zIndex": -1
+    }
+  ],
+  "trafficRateAnnotations": [
+    {
+      "id": "traffic-rate-1",
+      "position": {
+        "x": 532.4929677446153,
+        "y": 338.48376957934073
+      },
+      "nodeId": "r1",
+      "interfaceName": "Ethernet0/1",
+      "mode": "chart",
+      "textMetric": "combined",
+      "backgroundOpacity": 20,
+      "borderWidth": 1,
+      "borderRadius": 8,
+      "width": 241,
+      "height": 120
+    }
+  ],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "r1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 380,
+        "y": 260
+      }
+    },
+    {
+      "id": "r2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 360
+      }
+    },
+    {
+      "id": "r3",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 280,
+        "y": 360
+      }
+    },
+    {
+      "id": "r4",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 280,
+        "y": 480
+      }
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {
+    "style": "default",
+    "linkLabelMode": "show-all",
+    "lastNonTelemetryLinkLabelMode": "show-all"
+  }
+}
