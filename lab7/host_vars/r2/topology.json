@@ -1,0 +1,74 @@
+{
+  "loopback": {
+    "ipv4": "192.168.2.2",
+    "type": "loopback",
+    "neighbors": [],
+    "virtual_interface": true,
+    "ifindex": 0,
+    "ifname": "Loopback0"
+  },
+  "interfaces": [
+    {
+      "ipv4": "10.12.1.2/30",
+      "linkindex": 1,
+      "type": "p2p",
+      "name": "r2 -> r1",
+      "ifindex": 1,
+      "ifname": "Ethernet0/1",
+      "clab": {
+        "name": "Ethernet0/1"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.12.1.1/30",
+          "ifname": "Ethernet0/1",
+          "node": "r1"
+        }
+      ]
+    },
+    {
+      "ipv4": "10.23.1.1/30",
+      "linkindex": 2,
+      "type": "p2p",
+      "name": "r2 -> r3",
+      "ifindex": 2,
+      "ifname": "Ethernet0/2",
+      "clab": {
+        "name": "Ethernet0/2"
+      },
+      "neighbors": [
+        {
+          "ipv4": "10.23.1.2/30",
+          "ifname": "Ethernet0/1",
+          "node": "r3"
+        }
+      ]
+    }
+  ],
+  "clab": {
+    "kind": "cisco_iol",
+    "config_templates": [
+      {
+        "source": "ifstate",
+        "target": "/iol/ifstate.cfg"
+      }
+    ],
+    "binds": [
+      {
+        "target": "/iol/ifstate.cfg",
+        "source": "node_files/r2/ifstate"
+      }
+    ]
+  },
+  "box": "vrnetlab/cisco_iol:17.12.01",
+  "role": "router",
+  "af": {
+    "ipv4": true
+  },
+  "mgmt": {
+    "ifname": "Ethernet0/0",
+    "mac": "ca:fe:00:02:00:00",
+    "ipv4": "192.168.121.102"
+  },
+  "hostname": "clab-lab7-r2"
+}

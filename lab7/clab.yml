@@ -1,0 +1,49 @@
+name: lab7
+prefix: "clab"
+
+mgmt:
+  network: netlab_mgmt
+  ipv4-subnet: 192.168.121.0/24
+  # Note: 'start' not validated
+topology:
+  nodes:
+    r1:
+      mgmt-ipv4: 192.168.121.101
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      runtime: docker
+      binds:
+      - node_files/r1/ifstate:/iol/ifstate.cfg
+    r2:
+      mgmt-ipv4: 192.168.121.102
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      runtime: docker
+      binds:
+      - node_files/r2/ifstate:/iol/ifstate.cfg
+    r3:
+      mgmt-ipv4: 192.168.121.103
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      runtime: docker
+      binds:
+      - node_files/r3/ifstate:/iol/ifstate.cfg
+    r4:
+      mgmt-ipv4: 192.168.121.104
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      runtime: docker
+      binds:
+      - node_files/r4/ifstate:/iol/ifstate.cfg
+
+
+  links:
+  - endpoints:
+    - "r1:Ethernet0/1"
+    - "r2:Ethernet0/1"
+  - endpoints:
+    - "r2:Ethernet0/2"
+    - "r3:Ethernet0/1"
+  - endpoints:
+    - "r3:Ethernet0/2"
+    - "r4:Ethernet0/1"
